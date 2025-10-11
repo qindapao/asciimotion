@@ -1,2 +1,3 @@
 # asciimotion
-Animating Algorithms with ASCII &amp; Unicode Characters
+Animating Algorithms with ASCII & Unicode Characters
+
