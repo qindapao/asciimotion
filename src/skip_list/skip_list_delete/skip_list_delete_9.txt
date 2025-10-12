@@ -10,28 +10,30 @@
 
 
                   ..............> X
-导航链表   LEVEL5 ──────────────> 8 ────────────────────────────────────────────────
-                                 .│
+Navigation LEVEL5 ──────────────> 8 ────────────────────────────────────────────────
+   list                          .│
                                  .│
                                  vv X
-导航链表   LEVEL4 ──────────────> 8 ────────────────────────────────────────────────
-                                 .│
+Navigation LEVEL4 ──────────────> 8 ────────────────────────────────────────────────
+   list                          .│
                                  .│
                                  vv X             head pointer
-导航链表   LEVEL3 ──────────────> 8 ────X───────> 11 ──────────> 21 ────────────────
-                                 .│               │              │
+Navigation LEVEL3 ──────────────> 8 ────X───────> 11 ──────────> 21 ────────────────
+   list                          .│               │              │
                           .------+------.         │              │
                          /       vv X    v        v              v
-导航链表   LEVEL2 ─────> 1 ─────> 8 ───> 10 ────> 11 ──────────> 21 ────────────────
-                        .│        │      │        │              │
+Navigation LEVEL2 ─────> 1 ─────> 8 ───> 10 ────> 11 ──────────> 21 ────────────────
+   list                 .│        │      │        │              │
                         .│        │      │        │              │
                         vv ..> ..>v X    v        v              v
-数据链表   LEVEL1 ─0───> 1 ──>4 ─>8 ─X─> 10 ────> 11 ──> 19 ───> 21───>30───────────
+Data List  LEVEL1 ─0───> 1 ──>4 ─>8 ─X─> 10 ────> 11 ──> 19 ───> 21───>30───────────
                               \   *       ^
                                '---------'
 
-    特殊情况(2):
-        删除节点后某层的链表空了,那么塔的整体层级降低一层
-        如果遇到了尖塔(上面几层都只有一个相同的值),那么可能降低几层(概率非常非常低!)
-        有些跳表的设计会控制塔高,可以去了解下不同的策略
-
+    Special case (2):
+        After deleting a node, if the linked list of a certain layer is empty,
+        the overall level of the tower will be reduced by one layer. If a spire
+        is encountered (the upper layers have only one same value), it may be
+        reduced by several layers (the probability is very, very low!). Some
+        skip list designs will control the height of the tower. You can learn
+        about different strategies.

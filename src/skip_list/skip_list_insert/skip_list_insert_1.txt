@@ -5,8 +5,8 @@
 
 
                                 insert 20
-
-维护一个导航栈，栈中保存每层插入节点的前驱和后继节点指针, 一般情况下是一个动态数组
+Maintain a navigation stack that stores the predecessor and successor node
+pointers of each inserted node, which is generally a dynamic array
 stack = [  ]
 
 
@@ -14,27 +14,26 @@ stack = [  ]
 
 
                   ..............>
-导航链表   LEVEL4 ──────────────> 8 ────────────────────────────────────────────────
-                                  │
+Navigation LEVEL4 ──────────────> 8 ────────────────────────────────────────────────
+   list                           │
                                   │
                                   v
-导航链表   LEVEL3 ──────────────> 8 ────────────> 11 ──────────> 21 ────────────────
-                                  │               │              │
+Navigation LEVEL3 ──────────────> 8 ────────────> 11 ──────────> 21 ────────────────
+   list                           │               │              │
                                   │               │              │
                                   v               v              v
-导航链表   LEVEL2 ─────> 1 ─────> 8 ───> 10 ────> 11 ──────────> 21 ────────────────
-                         │        │      │        │              │
+Navigation LEVEL2 ─────> 1 ─────> 8 ───> 10 ────> 11 ──────────> 21 ────────────────
+   list                  │        │      │        │              │
                          │        │      │        │              │
                          v        v      v        v              v
-数据链表   LEVEL1 ─0───> 1 ──>4 ─>8 ───> 10 ────> 11 ──> 19 ───> 21───>30───────────
+Data List  LEVEL1 ─0───> 1 ──>4 ─>8 ───> 10 ────> 11 ──> 19 ───> 21───>30───────────
 
 
 
-    从LEVEL4头节点8开始, 8 < 20, 但是右边已经没有元素, 所以往下, 在往下之前
-    需要在导航栈中记录 8 为前驱节点
+    Starting from LEVEL4 head node 8, 8 < 20, but there are no elements on the
+    right, so go down. Before going down, you need to record 8 as the
+    predecessor node in the navigation stack.
 
-
-    如果我们要插入的是 3 , 那么这里记录 8 就应该是后继节点, 并且要从下层的头节点
-    重新开始查找
-
+    If we want to insert 3, then record 8 here should be the successor node,
+    and we need to restart the search from the head node of the lower layer.
 

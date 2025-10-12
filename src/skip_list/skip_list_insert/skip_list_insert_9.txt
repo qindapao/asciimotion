@@ -5,34 +5,34 @@
 
 
                                 insert 20
-
-维护一个导航栈，栈中保存每层插入节点的前驱和后继节点指针, 一般情况下是一个动态数组
+Maintain a navigation stack that stores the predecessor and successor node
+pointers of each inserted node, which is generally a dynamic array
 stack = [ [8,  NULL],
           [11, 21],
           [11, 21],
           [19, 21] ]
-导航链表   LEVEL5 ───────────────────────────────────────────*──────────────────────
-                                                             ^
+Navigation LEVEL5 ───────────────────────────────────────────*──────────────────────
+   list                                                      ^
                   ..............>                            ┃
-导航链表   LEVEL4 ──────────────> 8 ─────────────────────────*──────────────────────
-                                 .│                          ^
+Navigation LEVEL4 ──────────────> 8 ─────────────────────────*──────────────────────
+   list                          .│                          ^
                                  .│                          ┃
                                  vv ............>            ┃
-导航链表   LEVEL3 ──────────────> 8 ────────────> 11 ────────*─> 21 ────────────────
-                                  │              .│          ^   │
+Navigation LEVEL3 ──────────────> 8 ────────────> 11 ────────*─> 21 ────────────────
+   list                           │              .│          ^   │
                                   │              .│          ┃   │
                                   v              vv          ┃   v
-导航链表   LEVEL2 ─────> 1 ─────> 8 ───> 10 ────> 11 ────────*─> 21 ────────────────
-                         │        │      │       .│          ^   │
+Navigation LEVEL2 ─────> 1 ─────> 8 ───> 10 ────> 11 ────────*─> 21 ────────────────
+   list                  │        │      │       .│          ^   │
                          │        │      │       .│          ┃   │
                          v        v      v       vv          ┃   v
-数据链表   LEVEL1 ─0───> 1 ──>4 ─>8 ───> 10 ────> 11 ──> 19 ─*─> 21───>30───────────
+Data List  LEVEL1 ─0───> 1 ──>4 ─>8 ───> 10 ────> 11 ──> 19 ─*─> 21───>30───────────
                                                              ^
                                                              │
                                                              20
-    开始更新导航节点:
-        抛硬币, 如果抛到正面就在上层增加一个导航节点,如果抛到反面就马上停止.
-        假设我们第4次还抛到了正面!(这种概率已经非常小了,我们假设它发生了吧!)
-        这个时候要增加一个新层 LEVEL5
-        LEVEL 5先申请一个新节点, 下指针指向 LEVEL4 的 20 节点, 值是 20, 不用带其它数据
-
+    Start updating the navigation nodes:
+        Suppose we land on heads on the fourth flip! (The probability of this
+        happening is already very small, but let's just assume it happens!) Now
+        we need to add a new level, LEVEL 5. First, allocate a new node for
+        LEVEL 5. Its down pointer points to node 20 of LEVEL 4, with a value of
+        20. No other data is needed.
