@@ -11,6 +11,8 @@ Tools for playing ASCII animations in terminal or GUI environments.
 
 🔽[Download for Windows (x86_64)](https://github.com/user-attachments/files/22869205/AsciiMotionPlayer_windows_x86_64.zip)
 
+Project address: https://github.com/qindapao/common_tool
+
 2. [asciio](https://github.com/nkh/P5-App-Asciio)
 
 asciio's slides mode, But it plays asciio files, not txt files. 
