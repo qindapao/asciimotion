@@ -44,7 +44,14 @@ skip_list/
 ```
 
 - **All frame files must end with a numeric suffix starting from 1.**  
-This number represents the frame index. Example: `skip_list_delete_1.txt`, `skip_list_delete_2.txt`, etc.
+This number represents the frame index. such as: `skip_list_delete_1.txt`, `skip_list_delete_2.txt`, etc.
+It can also be a digital format with placeholders, such as: `skip_list_delete_001.txt`, `skip_list_delete_002.txt`, etc.
+
+- **If there are keyframes**(The meaning of key frames is frames that require special attention, such as the start frame of a specific operation)**, then the format needs to meet the following requirements.**
+    - Use the `K` character before the number at the end of a normal frame. for example:`skip_list_delete_K1.txt`, `skip_list_delete_K2.txt`, etc.
+    - If a brief comment is required for a keyframe, the comment text can be wrapped with two double underlines before the `K` character. for example:`skip_list_rotate__left__K1.txt`, `skip_list_rotate__right__K14.txt`。This means that frames `1` and `14` are the beginning of the `left rotation` and the beginning of the `right rotation`, and we can see the key frame identification and annotation text on the player interface!
+
+
 
 ---
 

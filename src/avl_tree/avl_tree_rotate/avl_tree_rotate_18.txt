@@ -1,0 +1,35 @@
+(18)   AVL TREE            Edit by ASCIIO                      
+                           https://github.com/nkh/P5-App-Asciio
+       .-------------------.                                   
+       | right left rotate | right left rotate 2               
+       '-------------------'                                   
+--------------------------------------------------             
+
+                             .....
+                             . 2 .
+                             .....
+                            /     \
+                           /       \
+                          /         \
+                         /           \
+                        v             v
+                     .....            ╔═══╗
+                     . 1 .       node ║ 3 ║ Imbalanced node
+                     .....            ╚═══╝
+                                      *    \
+                                     /      \
+                                    .        \
+                                    |         \
+                                    '          v
+                  child rotate left  \         .---.
+                                      V        | 4 |
+                                               '---'
+                                                    \
+                                                     \
+                                                      \
+                                                       v
+                                                       ╭───╮
+                                                       │ 5 │
+                                                       ╰───╯
+
+
